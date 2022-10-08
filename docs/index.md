@@ -17,13 +17,13 @@ The methods we will use to predict the values of the S&P 500 index: Support Vect
 Potential results will attempt to provide predictive insights into future movements of these major index funds within a non-insignificant relationship to these other indicators. This could also be used to verify commonly accepted correspondences between US economic indicators such as gold prices and the S&P 500. These results could be used to further solidify or challenge the common assumptions between common indicators and the variety of ML techniques could allow us to assess the accuracy and precision of the different methods used.
 
 ## **Contribution Table**
-| Team Member      | Contribution  
-| ----------       |   ----------            
+| Team Member      | Contribution  |
+| :----------       |   :----------  |         
 | Elias Izmirlian      | Wrote introduction and researched past uses of machine learning in stock prediction and provided possible algorithms to be used.|     
 | Aayush Dixit  | Researched background further, namely further research into specific algorithms in training past models as well as some background on our possible dataset.|
 | Jordan Coleman| Provided a formal problem definition that outlines the main goal of the project as well as further outlined the methods to be used.|
 | Gabe Montez  | Discussed potential results and possible impacts.|
-| Prince Fodeke  | Created GitHub page, set deadlines on gantt chart and created contribution table.
+| Prince Fodeke  | Created GitHub page, set deadlines on gantt chart and created contribution table.|
 
 ## **References**
 1. W. Huang, Y. Nakamori and S.-Y. Wang, "Forecasting stock market movement direction with support vector machine", Comput. Oper. Res., vol. 32, no. 10, pp. 2513-2522, Oct. 2005.
