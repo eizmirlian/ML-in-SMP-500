@@ -12,12 +12,13 @@ There are many different machine learning and deep learning methods used to pred
 
 ## **Methods**
 The methods we will use to predict the values of the S&P 500 index: Support Vector Machine, Elman Backpropagation Neural Networks, and Long Short Term Memory Network, each will use historical data to train the model using the features mentioned above. The data will be taken from Date to Date and was collected from Datahub.io. The data will follow an 80-20 training-testing split, and we will use the root means square error (RSME) metric to evaluate the accuracy of each method.
-Potential Results/Discussion
+
+## **Potential Results/Discussion**
 Potential results will attempt to provide predictive insights into future movements of these major index funds within a non-insignificant relationship to these other indicators. This could also be used to verify commonly accepted correspondences between US economic indicators such as gold prices and the S&P 500. These results could be used to further solidify or challenge the common assumptions between common indicators and the variety of ML techniques could allow us to assess the accuracy and precision of the different methods used.
 
 ## **Contribution Table**
 | Team Member      | Contribution |    
-| :---        |    :----:   |          
+| ---        |   ---   |          
 | Elias Izmirlian      | Wrote introduction and researched past uses of machine learning in stock prediction and provided possible algorithms to be used.|     
 | Aayush Dixit  | Researched background further, namely further research into specific algorithms in training past models as well as some background on our possible dataset.|
 | Jordan Coleman| Provided a formal problem definition that outlines the main goal of the project as well as further outlined the methods to be used.|
