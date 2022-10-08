@@ -18,7 +18,7 @@ Potential results will attempt to provide predictive insights into future moveme
 
 ## **Contribution Table**
 | Team Member      | Contribution |    
-| ---        |   ---   |          
+| ----------       |   ----------   |          
 | Elias Izmirlian      | Wrote introduction and researched past uses of machine learning in stock prediction and provided possible algorithms to be used.|     
 | Aayush Dixit  | Researched background further, namely further research into specific algorithms in training past models as well as some background on our possible dataset.|
 | Jordan Coleman| Provided a formal problem definition that outlines the main goal of the project as well as further outlined the methods to be used.|
