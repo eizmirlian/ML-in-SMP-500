@@ -1,0 +1,15 @@
+name: ml_project
+channels:
+    - defaults
+dependencies:
+    - matplotlib
+    - numpy
+    - imageio
+    - scikit-learn
+    - notebook
+    - pandas
+    - scipy
+    - ipywidgets
+    - tqdm
+    - statsmodels
+    - jupyterlab
