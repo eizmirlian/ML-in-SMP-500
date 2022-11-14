@@ -70,5 +70,7 @@ class DBSCAN_Analysis:
             entropy = -1 *(increaseProb * np.log2(increaseProb) + decreaseProb * np.log2(decreaseProb))
             clusterEntropies[cluster] = entropy
             totalEntropy += entropy
-            
-        return clusterEntropies, totalEntropy / numClusters
+        if numClusters != 0:
+            return clusterEntropies, totalEntropy / numClusters
+        else:
+            return None, 1
