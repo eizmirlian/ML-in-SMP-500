@@ -1,4 +1,4 @@
-# **Group 84 Project Proposal**
+# **Group 84 Project Midterm Proposal**
 
 ## **Team Members**
 Jordan Coleman, Aayush Dixit, Prince Fodeke, Elias Izmirlian, Gabriel Montes
