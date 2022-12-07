@@ -40,38 +40,39 @@ We also aimed to try to augment this with some kind of clustering method, which 
 ### **Unsupervised Learning- Results and Metrics**
 After running DBSCAN multiple times, we were able to cluster our data pretty nicely after using PCA with 1 to 4 principal components, depending on what we set the retained variance value to. Unfortunately, we found the clustering labels were able to give us relatively little information gain into whether a data point in a specific cluster would have a weekly increase or decrease. Knowing that DBSCAN is very parameter sensitive, the algorithm was tested and evaluated using the aforementioned Entropy based methods in order to try to find an ideal epsilon (as this parameter more heavily influences the clustering) for having clusters with the lowest average entropy values. We tested these Epsilon values with a variety of min-neighbors parameters in order to find the optimal conditions. Below are the plots of Average Cluster Entropy as the Epsilon value increases (where min-neighbors is set to 5, which was found to be the value most conducive to information gain). For the plot on the left, the retained variance during PCA is .99, whereas the retained variance during PCA is .99999 for the plot on the left.
 
-![Figure 1](/CS-4641-Project/assets/Figure_1.png) ![Figure 2](/CS-4641-Project/assets/Figure_2)
+<img src="assets/Figure_1.png" alt="Figure 1" width="400"/> 
+<img src="assets/Figure_2.png" alt="Figure 2" width="400"/>
 
 Interestingly enough, a small increase in the retained variance dramatically improved the average entropy of clusters. This suggests that this kind of clustering method could be utilized better if more information/variance was available for the algorithm to use in the form of additional features (i.e. the models were underfitted). Some improvement would need to occur before this clustering could be of much use, as even at best, the clusters, on average, provide an information gain of around .1 as to whether an additional datapoint would demonstrate an increase or decrease in the S&P 500 Index. The additional features to be added could be a past week’s opening price, high, low, average, or some combination of these, as the previous weeks would definitely influence the coming week. This is something the LSTM model takes into account by nature, which is most likely part of the reason it performs much better.
 
 ### **Supervised Learning- Results and Metrics**
 The metrics being used to analyze the performance of the LSTM model are Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE). The RMSE value for the model is low at 1.76, indicating that the model has pretty good performance. Below is pictured a plot demonstrating the predicted price of the S&P 500 versus the actual price of the test set. The training set is also pictured. Both sets are plotted with the date (or week the data point represents) as the identifier.
 
-![Figure 3](/CS-4641-Project/assets/Figure_3.png)
+![Figure 3](assets/Figure_3.png)
 
 This graph further enforces the idea that our LSTM model has pretty strong results so far, which are much more promising than the results of our clustering methods.
 
 Next, for SVM we first needed to determine which kernel would be best to use. We did this by first partitioning our data and true labels and seeing how separable our data was, which produced the following figure:
 
-![Linear Seperability](/CS-4641-Project/plots/LinearSeperability1.png)
+![Linear Seperability](/plots/linearSeparability1.png)
 
 The above figure shows that the data is not very linearly separable, and as a result we decided to use a polynomial kernel for our SVM algorithm. After experimenting with different polynomial degrees, we found that the accuracy for the test set plateaued once the degree reached 9 as shown below:
 
-![Accuracy](/CS-4641-Project/plots/accuracy1.png)
+![Accuracy](/plots/accuracy1.png)
 
 At an accuracy of just below 85%, this method proves to not be the most accurate at predicting stock prices. This is further demonstrated when we shifted our data values and true labels so that the labels correspond to whether a stock price goes up or down for a given week, given by the following figure:
 
-![Linear Seperability Shifted](/CS-4641-Project/plots/LinearSeperabilityShifted.png)
+![Linear Seperability Shifted](/plots/LinearSeparabilityShifted.png)
 
 We then applied the same SVM with a polynomial kernel which proved to be significantly more inaccurate than the original data as shown:
 
-![Accuracy Shifted](/CS-4641-Project/plots/accuracyShifted.png)
+![Accuracy Shifted](/plots/accuracyShifted.png)
 
 With the accuracy on this new data set ranging around 50%, it is determined that the original unshifted dataset provided a more accurate prediction on stock prices. This makes sense when looking at the graphs showing the separability of the data, since visually it is clear that the original data is more separable. But, since the data wasn’t linearly separable, the higher degree polynomial kernel provided a higher accuracy since it allowed the decision boundary to be more soft and flexible when fitting the data.
 
 Lastly, for Linear Regression we began with a null model to be trained with 40% of the available data, adding prices as far back as 50 days in order to make a prediction. When calculating the RMSE for our model, we found it to be 1227.91 which is unusually high indicating some error in our calculations that, with more time, we would have been able to correct. Below pictured is a plot comparing the predicted price of the model vs the actual price of the training set over a 10 year period.
 
-![Linear Regression](/CS-4641-Project/plots/accuracy2.png)
+![Linear Regression](/plots/accuracy2.png)
 
 As shown above, the model showed promising results that could be explored further in the future.
 	
