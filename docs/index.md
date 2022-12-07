@@ -48,31 +48,31 @@ Interestingly enough, a small increase in the retained variance dramatically imp
 ### **Supervised Learning- Results and Metrics**
 The metrics being used to analyze the performance of the LSTM model are Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE). The RMSE value for the model is low at 1.76, indicating that the model has pretty good performance. Below is pictured a plot demonstrating the predicted price of the S&P 500 versus the actual price of the test set. The training set is also pictured. Both sets are plotted with the date (or week the data point represents) as the identifier.
 
-![Figure 3](plots/Figure_3.png)
+<img src="./plots/Figure_3.png" alt="Figure 3"/> 
 
 This graph further enforces the idea that our LSTM model has pretty strong results so far, which are much more promising than the results of our clustering methods.
 
 Next, for SVM we first needed to determine which kernel would be best to use. We did this by first partitioning our data and true labels and seeing how separable our data was, which produced the following figure:
 
-![Linear Separability](plots/linearSeparability1.png)
+<img src="./plots/linearSeparability" alt="Linear Separability"/> 
 
 The above figure shows that the data is not very linearly separable, and as a result we decided to use a polynomial kernel for our SVM algorithm. After experimenting with different polynomial degrees, we found that the accuracy for the test set plateaued once the degree reached 9 as shown below:
 
-![Accuracy](plots/accuracy1.png)
+<img src="./plots/accuracy1.png" alt="Accuracy 1"/> 
 
 At an accuracy of just below 85%, this method proves to not be the most accurate at predicting stock prices. This is further demonstrated when we shifted our data values and true labels so that the labels correspond to whether a stock price goes up or down for a given week, given by the following figure:
 
-![Linear Separability Shifted](plots/linearSeparabilityShifted.png)
+<img src="./plots/linearSeparabilityShifted.png" alt="Linear Separability Shifted"/> 
 
 We then applied the same SVM with a polynomial kernel which proved to be significantly more inaccurate than the original data as shown:
 
-![Accuracy Shifted](plots/accuracyShifted.png)
+<img src="./plots/accuracyShifted.png" alt="Accuracy Shifted"/> 
 
 With the accuracy on this new data set ranging around 50%, it is determined that the original unshifted dataset provided a more accurate prediction on stock prices. This makes sense when looking at the graphs showing the separability of the data, since visually it is clear that the original data is more separable. But, since the data wasn’t linearly separable, the higher degree polynomial kernel provided a higher accuracy since it allowed the decision boundary to be more soft and flexible when fitting the data.
 
 Lastly, for Linear Regression we began with a null model to be trained with 40% of the available data, adding prices as far back as 50 days in order to make a prediction. When calculating the RMSE for our model, we found it to be 1227.91 which is unusually high indicating some error in our calculations that, with more time, we would have been able to correct. Below pictured is a plot comparing the predicted price of the model vs the actual price of the training set over a 10 year period.
 
-![Linear Regression](plots/accuracy2.png)
+<img src="./plots/accuracy2.png" alt="linear Regression"/> 
 
 As shown above, the model showed promising results that could be explored further in the future.
 	
