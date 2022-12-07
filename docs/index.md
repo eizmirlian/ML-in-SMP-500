@@ -54,7 +54,7 @@ This graph further enforces the idea that our LSTM model has pretty strong resul
 
 Next, for SVM we first needed to determine which kernel would be best to use. We did this by first partitioning our data and true labels and seeing how separable our data was, which produced the following figure:
 
-<img src="./plots/linearSeparability.png" alt="Linear Separability"/> 
+<img src="./plots/linearSeparability1.png" alt="Linear Separability"/> 
 
 The above figure shows that the data is not very linearly separable, and as a result we decided to use a polynomial kernel for our SVM algorithm. After experimenting with different polynomial degrees, we found that the accuracy for the test set plateaued once the degree reached 9 as shown below:
 
