@@ -62,7 +62,7 @@ The above figure shows that the data is not very linearly separable, and as a re
 
 At an accuracy of just below 85%, this method proves to not be the most accurate at predicting stock prices. This is further demonstrated when we shifted our data values and true labels so that the labels correspond to whether a stock price goes up or down for a given week, given by the following figure:
 
-![Linear Seperability Shifted](/plots/LinearSeparabilityShifted.png)
+![Linear Separability Shifted](/plots/linearSeparabilityShifted.png)
 
 We then applied the same SVM with a polynomial kernel which proved to be significantly more inaccurate than the original data as shown:
 
